@@ -1,0 +1,35 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4phx 12px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.homepage-title {
+  color: #1a73e8;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.homepage-description {
+  color: #555;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.homepage-description:last-child {
+    margin-bottom: 0;
+}
+
+.homepage-highlight {
+    color: #1a73e8;
+    font-weight: 700;
+}

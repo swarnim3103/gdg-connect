@@ -1,42 +1,84 @@
-#root {
-  max-width: 1280px;
+.App {
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.App-header {
+  background-color: #ffffff;
+  padding: 1rem 20px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-header h1 {
+  margin: 0;
+  color: #1a73e8;
+  font-size: 1.8rem;
+}
+
+.App-header nav button {
+  margin-left: 15px;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  color: #5f6368;
+  border: none;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  box-shadow: none;
+}
+
+.App-header nav button:hover {
+  color: #202124;
+  background-color: #f8f9fa;
+}
+
+.App-header nav button.active {
+  color: #1a73e8;
+  border-bottom: 2px solid #1a73e8;
+  border-radius: 0;
+}
+
+.App-main {
+  flex-grow: 1;
+  padding: 20px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+.content-container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .App-header {
+    flex-direction: column;
+    padding: 1rem 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .App-header nav {
+    margin-top: 10px;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .App-header nav button {
+    margin: 0 5px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .App-main {
+    padding: 10px;
+  }
+  
+  .content-container {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
 }
