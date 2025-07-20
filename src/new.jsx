@@ -14,30 +14,30 @@ const News = () => {
     ]);
   }, []);
 
-  // Fetch summaries using Gemini API
-  const fetchSummaries = async () => {
-    setLoading(true);
-    try {
-      const results = await Promise.all(
-        articles.map(async (headline) => {
-          const response = await fetch(
-            `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAOR_g47fKALmUCjJlyn5qXO92eGltYAmE`,
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                contents: [
-                  {
-                    parts: [
-                      {
-                        text: `Summarize this tech headline in 1-2 sentences: "${headline}"`,
-                      },
-                    ],
-                  },
-                ],
-              }),
-            }
-          );
+  //couldn't connect the api key --- my bad
+  // const fetchSummaries = async () => {
+  //   setLoading(true);
+  //   try {
+  //     const results = await Promise.all(
+  //       articles.map(async (headline) => {
+  //         const response = await fetch(
+  //           `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=my bad`,
+  //           {
+  //             method: "POST",
+  //             headers: { "Content-Type": "application/json" },
+  //             body: JSON.stringify({
+  //               contents: [
+  //                 {
+  //                   parts: [
+  //                     {
+  //                       text: `Summarize this tech headline in 1-2 sentences: "${headline}"`,
+  //                     },
+  //                   ],
+  //                 },
+  //               ],
+  //             }),
+  //           }
+  //         );
 
           const data = await response.json();
           return (
