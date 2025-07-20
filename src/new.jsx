@@ -39,20 +39,20 @@ const News = () => {
   //           }
   //         );
 
-          const data = await response.json();
-          return (
-            data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-            "No summary available."
-          );
-        })
-      );
-      setSummaries(results);
-    } catch (err) {
-      console.error("Error fetching summaries:", err);
-      setSummaries(articles.map(() => "Error summarizing."));
-    }
-    setLoading(false);
-  };
+  //         const data = await response.json();
+  //         return (
+  //           data?.candidates?.[0]?.content?.parts?.[0]?.text ||
+  //           "No summary available."
+  //         );
+  //       })
+  //     );
+  //     setSummaries(results);
+  //   } catch (err) {
+  //     console.error("Error fetching summaries:", err);
+  //     setSummaries(articles.map(() => "Error summarizing."));
+  //   }
+  //   setLoading(false);
+  // };
 
   return (
     <div className="content-container news-container">
